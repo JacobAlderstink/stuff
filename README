@@ -1,0 +1,36 @@
+To Compile:
+This code is written in C++
+so typical g++ command would look like:
+
+g++ *.cpp -o run
+
+
+assuming that all the files and the shell is in that directory.
+
+
+current implemention creates 100 trees of a maxDepth of 4;
+50 of them are built using the grow function,
+the other half are built using the full command;
+
+Jacob Alderink 
+October 10th 2018
+
+The goal of this program is to recreate the math equation (x^4 + 3x + 32/ 36) to the best of the programs abilities. It does this by using a genetic program which utilizes trees to make equations. And then evolving these equations to find better results
+
+It goes through 10000 iterations (ignore the variable named "generationCount") and our tree population is 100.
+
+2 children are created with each iteration off of 2 parents.
+
+Currently the mutation rate is 100% on both those children.
+
+Mutation chooses any random node terminal or non-term and has a 90-10 chance of converting it to a non-term/term respectively.
+
+The functions the tree is allowed to choose from is sqrt/power/+/-/*/divide/.
+
+Closure is handled by for division by checking the denominator first for 0, and if it is then just have the denominator part = 1.
+
+for the sqrt function by checking the operand first for negative values and if it is, it just sets it to 0.
+
+final output of this algorithm is the best and average fitness for each iteration.
+
+
